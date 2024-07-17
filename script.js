@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Adiciona o evento de clique para alternar a classe grayscale
         image.addEventListener('click', function() {
             image.classList.toggle('grayscale');
+            clickSound.play();
         });
     });
 
@@ -66,8 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'westfal.png'
     ];    
 
-    var divSorteio = document.querySelector('.sorteio');
     var imagemSorteada = document.querySelector('#imagemSorteada');
+    var clickSound = document.getElementById('click-sound');
 
     // Gera um número aleatório entre 0 e o comprimento da lista de imagens
     var indiceAleatorio = Math.floor(Math.random() * imagens.length);
